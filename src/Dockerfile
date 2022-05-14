@@ -52,3 +52,5 @@ RUN \
 SHELL ["/bin/bash", "-c"]
 
 CMD [ "node" ]
+
+USER root

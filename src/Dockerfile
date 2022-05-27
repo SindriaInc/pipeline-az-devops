@@ -10,6 +10,11 @@ LABEL "com.azure.dev.pipelines.agent.handler.node.path"="/usr/local/bin/node"
 
 ENV PATH "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
+# Make default staging cache
+RUN mkdir -p /staging && \
+    chmod 777 /staging && \
+    chown node:node /staging
+
 # Update and install packages
 RUN apk update && \
     apk add \

@@ -13,7 +13,7 @@ ENV PATH "/root/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sb
 # Make default staging cache
 RUN mkdir -p /staging && \
     chmod 777 /staging && \
-    chown node:node /staging
+    chown -R 1001:1001 /staging
 
 # Update and install packages
 RUN apk update && \
